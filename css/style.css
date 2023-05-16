@@ -1,0 +1,726 @@
+﻿/*--------------------------------------------------
+
+	TABLE OF CONTENTS
+
+	1.Basic CSS                html
+	2. Columns and blocks      .section
+	3. Layout styles           .header
+	4. Responsive              @media
+	
+--------------------------------------------------
+
+	Font color: #707070
+	Accent color: rgb(30,123,167)
+	Font: Nunito
+					
+--------------------------------------------------
+*/
+
+
+/*------------BASIC CSS------------*/
+/*------Basic------*/
+html, body{
+	height:100%;
+}
+
+body{
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+	color:#707070;
+	font-size:17px;
+	line-height:28px;
+	width:100%;
+    border-top:10px ;
+}
+
+p{
+	margin-bottom:20px;
+	margin-top:0;
+}
+
+a{
+	text-decoration:none;
+	;
+}
+
+a:focus{
+	outline:none;
+}
+
+b, strong{
+	font-weight:bold;
+}
+
+i, cite{
+	font-style:italic;
+}
+
+ul,ol{
+	margin:0;
+	margin-bottom:20px;
+	padding-left:20px;
+	text-align:left;
+}
+
+hr{
+	border:0;
+	border-bottom:1px solid #dddddd;
+	margin:20px 0;
+}
+
+/*------Images------*/
+img{
+	height:auto;
+	max-width:100%;
+	display:block;
+	margin:20px 0;
+}
+
+img:first-child{
+	margin-top:0;
+}
+
+img.left{
+	float:left;
+	margin-right:20px;
+}
+
+img.right{
+	float:right;
+	margin-left:20px;
+}
+
+/*------Headings------*/
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+	margin:50px 0 20px 0;
+	font-weight:600;
+	color:#000000;
+}
+
+h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child{
+	margin-top:0;
+}
+
+h1{
+	font-size:70px;
+	line-height:72px;
+	margin-bottom:40px;
+}
+
+h2{
+	font-size:40px;
+	line-height:50px;
+}
+
+h3{
+	font-size:32px;
+	line-height:40px;
+}
+
+h4{
+	font-size:24px;
+	line-height:30px;
+}
+
+h5{
+	font-size:18px;
+	line-height:23px;
+}
+
+h6{
+	font-size:14px;
+	line-height:18px;
+}
+
+
+/*------Blockquotes------*/
+blockquote{
+    padding:30px;
+    margin:0 0 20px 0;
+	font-style:italic;
+	font-size:20px;
+	line-height:26px;
+	color:#888888;
+}
+
+blockquote:before{
+	content:"\201C";
+}
+
+blockquote:after{
+	content:"\201D";
+}
+
+q{
+	font-style:italic;
+}
+
+/*------Pre, code------*/
+pre{
+	overflow:auto;
+	border:1px solid #dddddd;
+	padding:20px;
+	margin:0 0 20px 0;
+	text-align:left;
+}
+
+code, kbd{
+	background-color:#eeeeee;
+	text-align:left;
+}
+
+code.block{
+	white-space:pre-wrap;
+	padding:20px;
+	display:block;
+	background-color:#444444;
+	color:#aaaaaa;
+	margin-bottom:20px;
+	overflow:auto;
+}
+
+/*------Tables------*/
+table{
+	border:0;
+	border-collapse:collapse;
+	width:100%;
+	margin-bottom:20px;
+	text-align:left;
+}
+
+tr,th,td{
+	border:1px solid #dddddd;
+	padding:7px;
+}
+
+th{
+	text-align:left;
+	background-color:#eeeeee;
+	font-weight:bold;
+	color:#000000;
+}
+
+caption{
+	margin:0 0 10px 0;
+	display:block;
+	color:#000000;
+	text-align:left;
+    font-weight:bold;
+}
+
+/*------Forms------*/
+/*form*/
+form{
+	text-align:left;
+}
+/*Inputs*/
+input,button,textarea,select{
+	margin:0 0 20px 0;
+	padding:7px;
+	line-height:inherit;
+	font-size:inherit;
+	color:inherit;
+	font-family: 'Open Sans', sans-serif;
+	border:1px solid #f7f7f7;
+	background-color:#f7f7f7;
+	width:100%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	border-radius: 0;
+}
+
+input:focus,textarea:focus,select:focus{
+	outline:0;
+	border-color:#cccccc;
+}
+
+button:focus, submit:focus{
+	outline:0;
+}
+
+input:-webkit-autofill{
+	-webkit-box-shadow: 0 0 0 50px #f7f7f7 inset;
+}
+
+textarea{
+	min-height:250px;
+	overflow:auto;
+}
+
+.button, button, input[type=submit], input[type=reset], input[type=button]{
+	;
+	border-radius:99px;
+	color:#ffffff;
+	border:0;
+	width:auto;
+	cursor:pointer;
+	min-width:100px;
+    -webkit-appearance:none;
+    font-weight:600;
+}
+
+input[type=text], textarea, input[type=email], input[type=url], input[type=number], input[type=tel]{
+    -webkit-appearance:none;
+}
+
+/*Label*/
+label{
+	margin:0 0 10px 0;
+	display:block;
+	color:#000000;
+    font-weight:600;
+}
+
+/*------Audio, video------*/
+audio,video{
+	background-color:#000000;
+	width:100%;
+}
+
+
+/*------------COLUMNS AND BLOCKS------------*/
+/*------Blocks------*/
+.section{
+	padding:100px 0;
+}
+
+.content{
+	width:1100px;
+	margin:0 auto;
+    box-sizing:border-box;
+}
+
+.text-w{
+	width:700px;
+	margin:0 auto;
+	text-align:center;
+}
+
+.color{
+	background-color:#f5f5f5;
+}
+
+.dark{
+	background-color:#222222;
+	color:#aaaaaa;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h5, .dark h6{
+	color:#ffffff;
+}
+
+.dark .icofont{
+	color:#ffffff;
+}
+
+.border-top{
+border-top:1px solid #eeeeee;
+}
+
+.no-padding-bottom{
+	padding-bottom:0;
+}
+
+.no-padding-top{
+	padding-top:0;
+}
+
+/*------Columns------*/
+.half, .col50{
+	width:50%;
+	float:left;
+}
+
+.col33{
+	width:33.33%;
+	float:left;
+}
+
+.col66{
+	width:66.66%;
+	float:left;
+}
+
+.full, .col100, .half, .col50, .col33, .col66{
+	padding:0 30px;
+	box-sizing:border-box;
+}
+
+.middle{
+	vertical-align:middle;
+	display:table-cell;
+	float:none;
+}
+
+.full:after, .content:after, .menu:after, .section:after, .works-padding:after{
+	clear:both;
+	display:block;
+	content:"";
+}
+
+
+/*------------LAYOUT STYLES------------*/
+/*------Header------*/
+/*Header*/
+.header{
+	padding:70px 0;
+}
+
+.header h1{
+	font-size:30px;
+    line-height:50px;
+    display:inline-block;
+	margin:0;
+	;
+    border-bottom:4px solid ;
+}
+
+.header h2{
+	font-size:90px;
+	line-height:92px;
+	margin:70px 0 0 0;
+    font-weight:300;
+}
+
+.works{
+	padding:15px;
+}
+
+.work{
+	width:33%;
+	display:block;
+	float:left;
+	text-decoration:none;
+	border:0;
+	box-sizing:border-box;
+	padding:15px;
+    position:relative;
+	text-transform:uppercase;
+    font-weight:600;
+}
+
+.work-color{
+    ;
+}
+
+.work-img{
+	padding-bottom:90%;
+    transition:opacity 0.4s linear 0.1s;
+    background-size:cover;
+    background-position:center;
+}
+
+.hover-text-div{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+    opacity:0;
+    transition:opacity 0.2s;
+}
+
+.hover-text{
+	display:table;
+	width:100%;
+	height:100%;
+    box-sizing: border-box;
+    padding:50px;
+}
+
+.hover-text p{
+	vertical-align:middle;
+	display:table-cell;
+	text-align:center;
+	color:#000000;
+}
+
+.work:hover .work-img{
+	opacity:0.1;
+    transition:opacity 0.2s linear 0s;
+}
+
+.work:hover .hover-text-div{
+	opacity:1;
+    transition:opacity 0.2s linear 0.1s;
+}
+
+/*------Features section------*/
+.feature-text{
+	margin-left:55px;
+}
+
+.feature-text h3{
+	font-size:24px;
+	line-height:30px;
+}
+
+.feature-icon{
+	font-size:30px;
+	;
+	position:absolute;
+}
+
+/*------Form------*/
+.msg{
+	background-color:#fff0bf;
+	padding:20px;
+	margin-bottom:25px;
+	color:#ad870b;
+}
+
+.msg-sent{
+	padding:40px;
+	background-color:#f5f5f5;
+}
+
+.contact-label{
+	font-weight:bold;
+	color:#000000;
+}
+
+/*------Social icons------*/
+.social-icons{
+	background-color:#f7f7f7;
+    text-align:center;
+}
+
+.social-icons a{
+	color:inherit;
+	border:0;
+	font-size:30px;
+	padding:0 10px;
+    transition:opacity 0.5s;
+}
+
+.social-icons a:hover{
+    opacity:0.8;
+}
+
+.footer{
+	background-color:#f7f7f7;
+	color:#888888;
+    font-size:15px;
+}
+
+.footer p{
+	margin:0;
+	padding:15px;
+}
+
+.footer a{
+    color:inherit;
+}
+
+/*------Single work------*/
+.work-content .col66, .work-content .col33{
+    float:right;
+}
+
+.work-content{
+    padding-top:10px;
+}
+
+.back-to-works{
+    border:0;
+    padding:25px 0;
+    text-transform:uppercase;
+    display:block;
+    font-weight:600;
+}
+
+.back-to-works:before{
+    content:"\eb5e";
+    font-family:icofont;
+    padding-right:5px;
+}
+
+/*------404------*/
+.body-404{
+		border-top:0;
+}
+
+.pnf-div{
+	width:100%;
+	height:100%;
+	display:table;
+	color:#000000;
+}
+
+.pnf-center{
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.pnf-content{
+	margin:0 auto;
+	width:500px;
+    padding:30px;
+    box-sizing:border-box;
+}
+
+.pnf-big{
+	font-size:50px;
+	line-height:60px;
+}
+
+/*------Other------*/
+/*Go to top*/
+#to-top{
+	width:30px;
+	height:30px;
+	font-size:30px;
+	padding:10px;
+	color:#dddddd;
+	background-color:#000000;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	display:none;
+	cursor:pointer;
+	transition:0.5s;
+	opacity:0;
+}
+
+#to-top:hover{
+	color:#ffffff;
+}
+
+/*Fade*/
+.fade{
+	transition:opacity 0.5s;
+	opacity:0;
+}
+
+
+/*------------RESPONSIVE------------*/
+@media screen and (max-width:1150px){
+    .content{
+        width:940px;   
+    }
+}
+
+@media screen and (max-width:1000px){
+    .content{
+        width:100%;
+        padding:0 50px;
+    }
+    
+    .header h2{
+        font-size:70px;
+        line-height:70px;
+    }
+    
+    .col33, .col50, .half, .col66{
+        width:100%;   
+    }
+    
+    .contact{
+        padding-top:50px;   
+    }
+    
+    .work-content .col66{
+        padding-top:20px;   
+    }
+    
+    .work-content .content{
+        position:relative;
+        margin-bottom:50px;
+    }
+    
+    .back-to-works{
+        position:absolute;
+        bottom:-80px;
+    }
+}
+
+@media screen and (max-width:850px){
+    .work{
+        width:50%;   
+    }
+    
+    .header h2{
+        font-size:65px;
+        line-height:65px;
+    }
+}
+
+@media screen and (max-width:700px){
+    .work{
+        width:100%;   
+    }
+    
+    .content{
+        padding:0 30px;
+    }
+    
+    .section{
+        padding:70px 0;   
+    }
+    
+    .no-padding-top{
+        padding-top:0;   
+    }
+}
+
+@media screen and (max-width:550px){
+    .header h2{
+        font-size:60px;
+        line-height:60px;
+    }
+    
+    .pnf-content{
+        width:100%;   
+    }
+}
+
+@media screen and (max-width:490px){
+    .header h2{
+        font-size:60px;
+        line-height:60px;
+    }
+    
+    .content{
+        padding:0 15px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .header{
+        padding:30px 0;   
+    }
+    
+    .header h2{
+        font-size:50px;
+        line-height:50px;
+        margin-top:40px;
+    }
+    
+    .content{
+        padding:0 10px;
+    }
+}
+
+@media screen and (max-width:380px){
+    .header h2{
+        font-size:40px;
+        line-height:40px;
+    }
+    
+    .content{
+        padding:0;
+    }
+    
+    .social-icons a{
+        font-size:22px;
+        padding:0 5px;
+    }
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
