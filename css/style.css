@@ -31,9 +31,8 @@ body{
 	line-height:28px;
 	width:100%;
     border-top:10px ;
-    background-repeat: no-repeat;
- 	background-attachment: fixed;
- 	background-size: cover;
+    background-color: #ebfffd;
+   
 }
 
 p{
@@ -302,7 +301,7 @@ audio,video{
 }
 
 .color{
-	background-color:#f5f5f5;
+	background-color:#ccf4f6;
 	
 }
 
@@ -487,7 +486,7 @@ border-top:1px solid #eeeeee;
 
 /*------Social icons------*/
 .social-icons{
-	background-color:#f7f7f7;
+	background-color:#ccf4f6;
     text-align:center;
 }
 
@@ -504,7 +503,7 @@ border-top:1px solid #eeeeee;
 }
 
 .footer{
-	background-color:#f7f7f7;
+	background-color:#a6e4e7;
 	color:#888888;
     font-size:15px;
 }
