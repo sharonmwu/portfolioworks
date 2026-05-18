@@ -11,13 +11,13 @@ jobs:
       issues: write
       contents: read
     steps:
-- uses: alexleventer/github-issue-due-dates-action@v2
-  with:
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    upcoming-labels: |
-      - days: 3
-        label: 'Due in 3 days'
-      - days: 14
-        label: 'Due in 2 weeks'
-      - days: 30
-        label: 'Due in a month'
+      - uses: alexleventer/github-issue-due-dates-action@v2
+        with:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          upcoming-labels: |
+            - days: 3
+              label: 'Due in 3 days'
+            - days: 14
+              label: 'Due in 2 weeks'
+            - days: 30
+              label: 'Due in a month'
