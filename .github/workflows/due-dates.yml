@@ -2,7 +2,7 @@ name: Issue due-date labels
 on:
   schedule:
     - cron: '0 * * * *'   # hourly
-  workflow_dispatch: run it manually
+  workflow_dispatch: #run it manually
 
 jobs:
   label:
